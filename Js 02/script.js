@@ -4,7 +4,7 @@ if (4 === 9) {
     console.log('4 is not equal to 9');
 }
 
-const num = 50;
+const num = 66;
 // if (num < 49) {
 //     console.log('Too low');
 // } else if (num > 100) {
