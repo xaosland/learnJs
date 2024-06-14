@@ -1,0 +1,31 @@
+body {
+    container-name: body;
+    --violet-dark: #9400D3
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    container: blog / inline-size;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 36px;
+    background: var(--violet-dark);
+    border-radius: 10px;
+    margin: 10px;
+    max-width:250px;
+}
+@container blog (max-width: 780px){
+    article{
+        flex-direction: row;
+        max-width: 100%;
+    }
+}
