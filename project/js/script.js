@@ -17,23 +17,20 @@ const promo = document.querySelector(".promo__adv"),
     list = document.querySelector(".promo__interactive-list"),
     genre = document.querySelector(".promo__genre");
 
-
 bg.style.backgroundImage = "url('img/bg.jpg')";
 promo.remove();
 genre.textContent = "Драма";
 
-'use strict';
 
 const movieDB = {
     movies: [
-        "Логан",
-        "Лига справедливости",
-        "Ла-ла лэнд",
-        "Одержимость2",
+        "Логан 2",
+        "Лига справедливости 2 ",
+        "Ла-ла лэнд 2",
+        "Одержимость 2",
         "Скотт Пилигрим против..."
     ]
 };
-
 
 list.innerHTML = movieDB.movies.map((item, index) => {
     return `<li class="promo__interactive-item">${index + 1} ${item}</li>`
