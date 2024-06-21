@@ -32,26 +32,36 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
     };
 
+    console.log(movieDB)
+
     function showMovies(films, parent) {
         parent.innerHTML = "";
         movieDB.movies.forEach((item, index) => {
-            parent.innerHTML += `<li class="promo__interactive-item">${index + 1} ${item}<img src="./icons/trash.png" alt="trash" width="20px"/></li>`
+            parent.innerHTML += `<li class="promo__interactive-item">${index + 1} ${item}<div id="delete" class="delete"></div></li>`
         })
+
+        const deleteBtns = document.querySelectorAll(".delete");
+        deleteBtns.forEach((item, index) => {
+            item.addEventListener("click", () => {
+                item.parentElement.remove();
+                movieDB.movies.splice(index, 1);
+                showMovies(movieDB.movies, list);
+            });
+        });
     }
 
     addForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        const target = addInput.value;
-        movieDB.movies.push(target);
-
-        showMovies(movieDB.movies, list);
-
-
         const check = checkbox.checked;
-        if (check) {
-            document.body.style.backgroundColor = "red";
+        const newFilm = addInput.value;
+        if (newFilm) {
+            movieDB.movies.push(newFilm);
+            showMovies(movieDB.movies, list);
         }
+
     })
+
+
     showMovies(movieDB.movies, list);
 })
 

@@ -1,27 +1,27 @@
-//
-// const saveUser = (logger) => (user) => {
-//     logger(`Saving user with id: ${user.id}`);
-// }
-// const saveAdmin = (logger) => (admin) => {
-//     logger(`Saving admin with id: ${admin.id}`);
-// };
-// const saveBook = (logger) => (book) => {
-//     logger(`Saving book with id: ${book.id}`);
-// };
-// const logger = (message) => {
-//     console.info(`LOG:${message}`)
-// };
-//
-// const main = () => {
-//     const userSaver = saveUser(logger);
-//     const adminSaver = saveAdmin(logger);
-//     const bookSaver = saveBook(logger);
-//
-//     userSaver({id: "1"});
-//     adminSaver({id: "2"});
-//     bookSaver({id: "3"});
-// };
-// main();
+
+const saveUser = (logger) => (user) => {
+    logger(`Saving user with id: ${user.id}`);
+}
+const saveAdmin = (logger) => (admin) => {
+    logger(`Saving admin with id: ${admin.id}`);
+};
+const saveBook = (logger) => (book) => {
+    logger(`Saving book with id: ${book.id}`);
+};
+const logger = (message) => {
+    console.info(`LOG:${message}`)
+};
+
+const main = () => {
+    const userSaver = saveUser(logger);
+    const adminSaver = saveAdmin(logger);
+    const bookSaver = saveBook(logger);
+
+    userSaver({id: "1"});
+    adminSaver({id: "2"});
+    bookSaver({id: "3"});
+};
+main();
 //
 //
 // function delay(milliseconds) {
