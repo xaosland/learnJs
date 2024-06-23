@@ -1,54 +1,22 @@
-.card-container {
-    width: 80%;
-    height: 500px;
-    border: 1px solid white;
-    border-radius: 5px;
-    display: flex;
-}
-
-.cards {
-    position: relative;
-    left: 0;
-    width: 80px;
-    padding: 8px;
-    height: auto;
-    background-color: white;
-    transition: .5s all;
-    flex: 1;
-    font-size: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.cards:nth-child(even) {
-    background-color: aliceblue;
-}
-
-.cards:nth-child(odd) {
-    background-color: #706CC1;
-}
-
-.cards {
-    flex: 1;
-    cursor: pointer;
-}
-
-.cards:hover {
-    flex: 3;
-}
-
-img {
-    height: 100%;
-
-    overflow: hidden;
-}
-
-.blue{
+.box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
     background-color: blue;
+    overflow: hidden;
+border: #706CC1 2px solid;
 }
-
-.red{
-    background-color: red;
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 3px solid red;
+}
+button {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: yellow;
+    border: none;
 }
